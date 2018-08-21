@@ -1,0 +1,325 @@
+<form action='/qadeer' method='post' enctype="multipart/form-data">
+
+    <table class="table table-bordered">
+        <thead>
+
+            <tr>
+                <td>DAY</td>
+                <td>
+                    WORKING DAY
+                </td>
+                <td>
+                    WORKING HOURS
+                </td>
+                <td>DATE</td>
+                <td> TOTAL DAY</td>
+                <td> LABOUR PAY</td>
+                <td> TOTAL DAY R</td>
+                <td> TOTAL HOURS</td>
+                <td> HOURS RATE</td>
+                <td> HOURS RATE total</td>
+                <td> grand total</td>
+                <td> kharacha</td>
+                <td> previous</td>
+
+
+
+
+            </tr>
+
+
+            <tr>
+                <td>MONDAY</td>
+                <td>
+                    <input type="text" name="a" class="form-control">
+                </td>
+                <td>
+                    <input type="text" name="b" id="hours" class="form-control" onblur="getHO(this.value)">
+                </td>
+
+
+
+                <td>
+                    <input type="text" name="c" class="form-control" width="100px">
+                </td>
+                <td>
+                    <input type="text" name="d" class="form-control" id="day" onblur="labDay(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="e" class="form-control" id="labPay" onblur="labPaay(this.value)">
+                </td>
+
+                <td>
+                    <input type="text" name="f" class="form-control" id="dayTotal" placeholder="yai" onblur="s(this.value)">
+                </td>
+
+                <td>
+                    <input type="text" name="g" class="form-control" id="hourTotal">
+                </td>
+
+                <td>
+                    <input type="text" name="h" class="form-control" id="hourRate" onblur="hourRrate(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="i" class="form-control" id="hourRateTotal" placeholder="yai1" onblur="s(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="j" id="GT" class="form-control">
+                </td>
+                <td>
+                    <input type="text" name="k" id="khar" class="form-control" onblur="final(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="l" id="pre" class="form-control">
+                </td>
+
+
+
+            </tr>
+
+
+            <tr>
+                <td>TUESDAY</td>
+                <td>
+                    <input type="text" name="m" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="n" id="hours" class="form-control" onblur="getHT(this.value)">
+                </td>
+
+                <td>
+                    <input type="text" name="o" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td>
+                    <input type="text" name="p" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="q" id="hours" class="form-control" onblur="getHTH(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="r" class="form-control">
+                </td>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td>
+                    <input type="text" name="ppp" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="htp" id="hours" class="form-control" onblur="getHF(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="http" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>
+                    <input type="text" name="v" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="w" id="hours" class="form-control" onblur="getHFI(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="x" class="form-control">
+                </td>
+            </tr>
+
+            <tr>
+                <td>SATURDAY</td>
+                <td>
+                    <input type="text" name="y" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="z" id="hours" class="form-control" onblur="getHS(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="aa" class="form-control">
+                </td>
+            </tr>
+
+            <tr>
+                <td row="2">SUNDAY</td>
+                <td>
+                    <input type="text" name="bb" class="form-control">
+                </td>
+
+                <td>
+                    <input type="text" name="cc" id="hours" class="form-control" onblur="getHSE(this.value)">
+                </td>
+                <td>
+                    <input type="text" name="dd" class="form-control">
+                </td>
+
+            </tr>
+
+
+        </thead>
+
+    </table>
+
+    <center>
+        <button class="btn btn-success">submit</button>
+    </center>
+
+
+</form>
+
+
+<script>
+
+
+    let labday = 0, labpay = 0, total = 0;
+
+    let labDay = (value) => {
+        labday = value;
+        const total = multiply(labday, labpay);
+        setTotal(total);
+    }
+
+    let multiply = (labday, labpay) => {
+        return labday * labpay
+    }
+
+    let setTotal = (total) => {
+        document.querySelector("#dayTotal").value = total;
+    }
+
+    let labPaay = (value) => {
+        labpay = value;
+        const total = multiply(labday, labpay);
+        setTotal(total);
+    }
+
+    //multiply hours
+
+    let one = 0, two = 0, three = 0, four = 0, five = 0, six = 0, seven = 0, hourtotal = 0;
+
+    let getHO = (valuee) => {
+        one = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+    let getHT = (valuee) => {
+        two = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+    let getHTH = (valuee) => {
+        three = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+    let getHF = (valuee) => {
+        four = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+    let getHFI = (valuee) => {
+        five = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+    let getHS = (valuee) => {
+        six = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+    let getHSE = (valuee) => {
+        seven = valuee;
+        const hourtotal = multiplyy(one, two, three, four, five, six, seven);
+        setTotall(hourtotal);
+    }
+
+
+    let multiplyy = (one, two, three, four, five, six, seven) => {
+        return +one + +two + +three + +four + +five + +six + +seven;
+    }
+
+    let setTotall = (hourtotal) => {
+        document.querySelector("#hourTotal").value = hourtotal;
+    }
+
+
+
+    // total hours * hour rate
+
+
+    let kharcha = 0, previous = 0;
+
+    let minus = (total, kharcha) => {
+        return total * kharcha
+    }
+
+    let setPrevious = (previous) => {
+        document.querySelector("#hourRateTotal").value = previous;
+    }
+
+    let hourRrate = (value) => {
+        kharcha = value;
+        const total =
+            document.querySelector("#hourTotal").value;
+        const previous = minus(total, kharcha);
+        setPrevious(previous);
+    }
+
+    // total + total
+
+
+    let s = () => {
+        const a = document.querySelector("#dayTotal").value;
+        const b = document.querySelector("#hourRateTotal").value;
+        const totals = plusss(a, b);
+        stotal(totals);
+    }
+
+
+    let plusss = (a, b) => {
+        return +a + +b
+    }
+
+    let stotal = (totals) => {
+        document.querySelector("#GT").value = totals;
+    }
+
+    // grand total - previous
+
+    let khar = 0, pre = 0;
+
+    let minusf = (totalsl, khar) => {
+        return totalsl - khar
+    }
+
+    let setPreviousa = (previousz) => {
+        document.querySelector("#pre").value = previousz;
+    }
+
+    let final = (v) => {
+        khar = v;
+        const totalsl =
+            document.querySelector("#GT").value;
+        const previousz = minusf(totalsl, khar);
+        setPreviousa(previousz);
+    }
+
+
+
+
+
+</script>
