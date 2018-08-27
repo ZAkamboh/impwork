@@ -1,0 +1,190 @@
+ {{#if delete_message}}
+<div class='alert alert-success'> {{delete_message}}</div>
+{{/if}} {{#if edit_message}}
+<div class='alert alert-success'> {{edit_message}}</div>
+{{/if}}
+
+<hr style="background-color: red">
+<hr style="background-color: red">
+<table class="table table-bordered">
+    <thead>
+        {{#each rec}}
+        <tr>
+            <td style="background-color:brown ;color:white">DAY</td>
+            <td style="background-color:blue;color:white">
+                WORKING DAY
+            </td>
+            <td style="background-color:rgb(0, 124, 128) ;color:white">
+                WORKING HOURS
+            </td>
+            <td style="background-color:rgb(0, 255, 128) ;color:white">DATE</td>
+            <td style="background-color:blue;color:white"> TOTAL DAY</td>
+            <td style="background-color:blue;color:white"> LABOUR PAY</td>
+            <td style="background-color:blue;color:white"> TOTAL DAY RATE</td>
+            <td style="background-color:rgb(0, 124, 128) ;color:white"> TOTAL HOURS</td>
+            <td style="background-color:rgb(0, 124, 128) ;color:white"> HOURS RATE</td>
+            <td style="background-color:rgb(0, 124, 128) ;color:white"> HOURS RATE total</td>
+            <td style="background-color:rgba(128, 0, 32, 0.295) ;color:white"> grand total</td>
+            <td style="background-color:red ;color:white"> kharacha</td>
+            <td style="background-color:green ;color:white"> previous</td>
+
+
+
+
+        </tr>
+
+        <tr>
+
+            <td>MONDAY</td>
+            <td>
+                {{a}}
+            </td>
+            <td>
+                {{b}}
+            </td>
+
+
+
+            <td>
+                {{c}}
+            </td>
+            <td>
+                {{d}}
+            </td>
+            <td>
+                {{e}}
+            </td>
+
+            <td>
+                {{f}}
+            </td>
+
+            <td>
+                {{g}}
+            </td>
+
+            <td>
+                {{h}}
+            </td>
+            <td>
+                {{i}}
+            </td>
+            <td>
+                {{j}}
+            </td>
+            <b>
+                <td style="color:red">
+                    {{k}}
+                </td>
+            </b>
+            <td style="background-color:green;color:white">
+                {{l}}
+            </td>
+
+
+
+        </tr>
+
+
+        <tr>
+            <td>TUESDAY</td>
+            <td>
+                {{m}}
+            </td>
+
+            <td>
+                {{n}}
+            </td>
+
+            <td>
+                {{o}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>WEDNESDAY</td>
+            <td>
+                {{p}}
+            </td>
+
+            <td>
+                {{q}}
+            </td>
+            <td>
+                {{r}}
+            </td>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>THURSDAY</td>
+            <td>
+                {{ppp}}
+            </td>
+
+            <td>
+                {{htp}}
+            </td>
+            <td>
+                {{http}}
+            </td>
+        </tr>
+        <tr>
+            <td>FRIDAY</td>
+            <td>
+                {{v}}
+            </td>
+
+            <td>
+                {{w}}
+            </td>
+            <td>
+                {{x}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>SATURDAY</td>
+            <td>
+                {{y}}
+            </td>
+
+            <td>
+                {{z}}
+            </td>
+            <td>
+                {{aa}}
+            </td>
+        </tr>
+
+        <tr>
+            <td row="2">SUNDAY</td>
+            <td>
+                {{bb}}
+            </td>
+
+            <td>
+                {{cc}}
+            </td>
+            <td>
+                {{dd}}
+            </td>
+            <td>
+                <form action="/del/{{id}}?_method=delete" method="post">
+                    <button type="submit" class="btn btn-danger">delete</button>
+                </form>
+
+            </td>
+            <td>
+                <a href="/edit/{{id}}" class='btn btn-info'> edit</a>
+            </td>
+
+        </tr>
+
+
+    </thead>
+    {{/each}}
+
+</table>
+<hr>

@@ -1,0 +1,69 @@
+{{#each errors}}
+
+<div class="alert alert-danger">
+    {{message}}
+</div>
+- {{/each}}
+<style>
+    .container {
+
+        border: 2px solid green;
+
+    }
+</style>
+<img class="d-flex mr-3 rounded-circle" src="/uploads/shafiq.jpg" style="height:50px;width:50px" alt="">
+<h1 style="text-align:center;font-size:50px;font-family:cursive;color:aqua">shafiq record</h1>
+<div class="container">
+    <form action='/admin/posts/create' method='post' enctype="multipart/form-data">
+        <div class='form-group'>
+            <label for="title">
+                <h2>NAME</h2>
+            </label>
+            <input name="name" type="text" class="form-control" id="title" placeholder="enter title">
+        </div>
+
+
+        <div class='form-group'>
+            <label for="body">body </label>
+            <input name="body" type="text" class="form-control" style="height:200px" id="title">
+        </div>
+
+        <div class='form-group'>
+            <label for="title">
+                <h2>RATE</h2>
+            </label>
+            <input name="rate" type="number" class="form-control" id="title" placeholder="enter title">
+        </div>
+
+        <div class='form-group'>
+            <label for="title">
+                <h2>TOTAL</h2>
+            </label>
+            <input name="total" type="number" class="form-control" id="title" placeholder="enter title">
+        </div>
+
+        <div class='form-group'>
+            <label for="title">
+                <h2>KHARCHA</h2>
+            </label>
+            <input name="kharcha" type="number" class="form-control" id="title" placeholder="enter title">
+        </div>
+        <div class='form-group'>
+            <label for="title">
+                <h2>ADVANCED</h2>
+            </label>
+            <input name="advanced" type="number" class="form-control" id="title" placeholder="enter title">
+        </div>
+
+        <div class='form-group'>
+            <label for="title">
+                <h2>Previous Payment</h2>
+            </label>
+            <input name="p" type="number" class="form-control" id="title" placeholder="enter title">
+        </div>
+
+
+        <button type="submit" class="btn btn-success b">submit </button>
+    </form>
+
+</div>

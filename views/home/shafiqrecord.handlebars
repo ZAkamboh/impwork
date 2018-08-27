@@ -1,0 +1,258 @@
+ {{#if delete_messageshafiq}}
+<div class='alert alert-success'> {{delete_messageshafiq}}</div>
+{{/if}} {{#if edit_messageshafiq}}
+<div class='alert alert-success'> {{edit_messageshafiq}}</div>
+{{/if}}
+
+
+
+
+<hr style="background-color: red">
+<hr style="background-color: red">
+
+<input type="text" id="ch" class="form-control">
+
+<table class="table table-bordered">
+    <thead>
+        {{#each post}}
+        <tr>
+            <td style="background-color:blueviolet;color:white">
+                DATE
+            </td>
+
+            <td style="background-color:blue;color:white">
+                BODY
+            </td>
+
+            <td style="background-color:blue;color:white">
+                QUANTITY
+            </td>
+            <td style="background-color:rgb(0, 124, 128) ;color:white">
+                RATE
+            </td>
+            <td style="background-color:rgb(0, 255, 128) ;color:white"> RATE TOTAL</td>
+            <td style="background-color:blue;color:white">GRAND TOTAL</td>
+
+            <td style="background-color:red ;color:white"> kharcha</td>
+            <td style="background-color:green ;color:white"> previous</td>
+
+
+
+
+        </tr>
+
+        <tr>
+
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{aa}}
+            </td>
+
+            <td>
+                {{taf7}}
+            </td>
+            <td>
+                {{quan1}}
+            </td>
+
+
+
+            <td>
+                {{total1}}
+            </td>
+            <td>
+                {{GT}}
+            </td>
+
+
+
+
+
+            <td style="color:red">
+                {{k}}
+            </td>
+
+            <td style="background-color:green;color:white">
+                <input type="text" value="{{pree}}" onblur="getTotal(this.value)">
+            </td>
+
+
+
+        </tr>
+        <tr>
+            <td>
+                {{date}}
+            </td>
+
+            <td>
+                {{body2}}
+            </td>
+            <td>
+                {{taf1}}
+            </td>
+
+            <td>
+                {{quan2}}
+            </td>
+
+            <td>
+                {{total2}}
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{body3}}
+            </td>
+            <td>
+                {{taf2}}
+            </td>
+
+            <td>
+                {{quan3}}
+            </td>
+            <td>
+                {{total3}}
+            </td>
+
+
+            </td>
+
+
+
+        </tr>
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{body4}}
+            </td>
+
+            <td>
+                {{taf3}}
+            </td>
+
+            <td>
+                {{quan4}}
+            </td>
+            <td>
+                {{total4}}
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{body5}}
+            </td>
+
+            <td>
+                {{taf4}}
+            </td>
+
+            <td>
+                {{quan5}}
+            </td>
+            <td>
+                {{total5}}
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{body6}}
+            </td>
+            <td>
+                {{taf5}}
+            </td>
+
+            <td>
+                {{quan6}}
+            </td>
+            <td>
+                {{total6}}
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                {{date}}
+            </td>
+
+            <td>
+                {{body7}}
+            </td>
+
+            <td>
+                {{taf6}}
+            </td>
+
+            <td>
+                {{quan7}}
+            </td>
+            <td>
+                {{total7}}
+            </td>
+            <td>
+                <form action="/shafiq/delete/{{id}}?_method=delete" method="post">
+                    <button type="submit" class="btn btn-danger">delete</button>
+                </form>
+
+            </td>
+
+            <td>
+                <a href="/shafiq/edit/{{id}}" class='btn btn-info'> edit</a>
+            </td>
+
+        </tr>
+    </thead>
+    {{/each}}
+
+</table>
+
+<script>
+
+    let quantity = 0, total = 0;
+
+    let getTotal = (value) => {
+        quantity = value;
+        const total = multiply(quantity, quantity);
+        setTotal(total);
+    }
+
+    let multiply = (quantity, quantity) => {
+        return quantity * quantity
+    }
+
+    let setTotal = (total) => {
+        document.querySelector("#ch").value = total;
+    }
+
+    let getTotal = (value) => {
+        quantity = value;
+        const total = multiply(quantity, quantity);
+        setTotal(total);
+    }
+
+
+
+
+</script>

@@ -1,0 +1,182 @@
+ {{#if delete_message}}
+<div class='alert alert-success'> {{delete_message}}</div>
+{{/if}}
+
+<hr style="background-color: red">
+<hr style="background-color: red">
+<form action='/talha/edit/{{tall.id}}?_method=PUT' method="post" enctype="multipart/form-data">
+
+    <table class="table table-bordered">
+        <thead>
+
+            <tr>
+                <td style="background-color:brown ;color:white">DAY</td>
+                <td style="background-color:blue;color:white">
+                    WORKING DAY
+                </td>
+                <td style="background-color:rgb(0, 124, 128) ;color:white">
+                    WORKING HOURS
+                </td>
+                <td style="background-color:rgb(0, 255, 128) ;color:white">DATE</td>
+                <td style="background-color:blue;color:white"> TOTAL DAY</td>
+                <td style="background-color:blue;color:white"> LABOUR PAY</td>
+                <td style="background-color:blue;color:white"> TOTAL DAY RATE</td>
+                <td style="background-color:rgb(0, 124, 128) ;color:white"> TOTAL HOURS</td>
+                <td style="background-color:rgb(0, 124, 128) ;color:white"> HOURS RATE</td>
+                <td style="background-color:rgb(0, 124, 128) ;color:white"> HOURS RATE total</td>
+                <td style="background-color:rgba(128, 0, 32, 0.295) ;color:white"> grand total</td>
+                <td style="background-color:red ;color:white"> kharacha</td>
+                <td style="background-color:green ;color:white"> previous</td>
+
+
+
+
+            </tr>
+
+            <tr>
+
+                <td>MONDAY</td>
+                <td>
+                    <input type="text" name="a" class="form-control" value="{{tall.a}}">
+                </td>
+                <td>
+                    <input type="text" name="b" class="form-control" value="{{tall.b}}">
+                </td>
+
+
+
+                <td>
+                    <input type="text" name="c" class="form-control" value="{{tall.c}}">
+                </td>
+                <td>
+                    <input type="text" name="d" class="form-control" value="{{tall.d}}">
+                </td>
+                <td>
+                    <input type="text" name="e" class="form-control" value="{{tall.e}}">
+                </td>
+
+                <td>
+                    <input type="text" name="f" class="form-control" value="{{tall.f}}">
+                </td>
+
+                <td>
+                    <input type="text" name="g" class="form-control" value="{{tall.g}}">
+                </td>
+
+                <td>
+                    <input type="text" name="h" class="form-control" value="{{tall.h}}">
+                </td>
+                <td>
+                    <input type="text" name="i" class="form-control" value="{{tall.i}}">
+                </td>
+                <td>
+                    <input type="text" name="j" class="form-control" value="{{tall.j}}">
+                </td>
+                <b>
+                    <td style="color:red">
+                        <input type="text" name="k" class="form-control" value="{{tall.k}}">
+                    </td>
+                </b>
+                <td style="background-color:green;color:white">
+                    <input type="text" name="l" class="form-control" value="{{tall.l}}">
+                </td>
+
+
+
+            </tr>
+
+
+            <tr>
+                <td>TUESDAY</td>
+                <td>
+                    <input type="text" name="m" class="form-control" value="{{tall.m}}">
+                </td>
+
+                <td>
+                    <input type="text" name="n" class="form-control" value="{{tall.n}}">
+                </td>
+
+                <td>
+                    <input type="text" name="o" class="form-control" value="{{tall.o}}">
+                </td>
+
+            </tr>
+            <tr>
+                <td>WEDNESDAY</td>
+                <td>
+                    <input type="text" name="p" class="form-control" value="{{tall.p}}">
+                </td>
+
+                <td>
+                    <input type="text" name="q" class="form-control" value="{{tall.q}}">
+                </td>
+                <td>
+                    <input type="text" name="r" class="form-control" value="{{tall.r}}">
+                </td>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+                <td>
+                    <input type="text" name="ppp" class="form-control" value="{{tall.ppp}}">
+                </td>
+
+                <td>
+                    <input type="text" name="htp" class="form-control" value="{{tall.htp}}">
+                </td>
+                <td>
+                    <input type="text" name="http" class="form-control" value="{{tall.http}}">
+                </td>
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>
+                    <input type="text" name="v" class="form-control" value="{{tall.v}}">
+                </td>
+
+                <td>
+                    <input type="text" name="w" class="form-control" value="{{tall.w}}">
+                </td>
+                <td>
+                    <input type="text" name="x" class="form-control" value="{{tall.x}}">
+                </td>
+            </tr>
+
+            <tr>
+                <td>SATURDAY</td>
+                <td>
+                    <input type="text" name="y" class="form-control" value="{{tall.y}}">
+                </td>
+
+                <td>
+                    <input type="text" name="z" class="form-control" value="{{tall.z}}">
+                </td>
+                <td>
+                    <input type="text" name="aa" class="form-control" value="{{tall.aa}}">
+                </td>
+            </tr>
+
+            <tr>
+                <td row="2">SUNDAY</td>
+                <td>
+                    <input type="text" name="bb" class="form-control" value="{{tall.bb}}">
+                </td>
+
+                <td>
+                    <input type="text" name="cc" class="form-control" value="{{tall.cc}}">
+                </td>
+                <td>
+                    <input type="text" name="dd" class="form-control" value="{{tall.dd}}">
+                </td>
+                <td>
+                    <button class="btn btn-info">update</button>
+                </td>
+
+            </tr>
+        </thead>
+
+
+    </table>
+</form>

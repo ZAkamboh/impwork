@@ -1,0 +1,119 @@
+ {{#each errors}}
+
+<div class="alert alert-danger">
+    {{message}}
+</div>
+- {{/each}}
+
+
+<img class="d-flex mr-3 rounded-circle" src="/uploads/shafiq.jpg" style="height:50px;width:50px" alt="">
+<h1 style="text-align:center;font-size:50px;font-family:cursive;color:blue">shafiq record</h1>
+<div class="container">
+
+    <form action='/shafiq' method='post' enctype="multipart/form-data">
+
+
+        <div class="container">
+            <table class="table table-bordered">
+
+                <tr>
+
+
+                    <th>NAME </th>
+                    <th>BODY </th>
+                    <th>QUANTITY </th>
+                    <th>RATE</th>
+                    <th>TOTAL </th>
+                    <th>Kharcha </th>
+
+                    <th>PREVIOUS BALANCE </th>
+                </tr>
+
+                <tr>
+
+
+                    <td>
+                        <input name="name" type="text" class="form-control" id="title" placeholder="enter title">
+                    </td>
+                    <td>
+                        <textarea name="body" class="form-control"></textarea>
+                        <td>
+                            <input name="quan" type="number" class="form-control" id="title" placeholder="enter title" onblur="getQuantity(this.value)">
+                        </td>
+                        <td>
+                            <input name="rate" type="number" class="form-control" id="title" placeholder="enter title" onblur="getRate(this.value)">
+                        </td>
+                        <td>
+                            <input name="total" type="number" class="form-control" id="total" placeholder="enter title">
+                        </td>
+                        <td>
+                            <input name="kharcha" type="number" class="form-control" id="title" placeholder="enter title" onblur="getKhar(this.value)">
+                        </td>
+
+                        <td>
+                            <input name="p" type="number" class="form-control" id="previous" placeholder="enter title">
+                        </td>
+
+
+
+
+                </tr>
+
+            </table>
+        </div>
+        <center>
+            <button type="submit" class="btn btn-success ">submit </button>
+        </center>
+    </form>
+
+</div>
+
+
+<script>
+
+
+    //multiply
+    let quantity = 0, rate = 0, total = 0;
+
+    let getQuantity = (value) => {
+        quantity = value;
+        const total = multiply(quantity, rate);
+        setTotal(total);
+    }
+
+    let multiply = (quantity, rate) => {
+        return quantity * rate
+    }
+
+    let setTotal = (total) => {
+        document.querySelector("#total").value = total;
+    }
+
+    let getRate = (value) => {
+        rate = value;
+        const total = multiply(quantity, rate);
+        setTotal(total);
+    }
+
+    //minus
+
+
+    let kharcha = 0, previous = 0;
+
+    let minus = (total, kharcha) => {
+        return total - kharcha
+    }
+
+    let setPrevious = (previous) => {
+        document.querySelector("#previous").value = previous;
+    }
+
+    let getKhar = (value) => {
+        kharcha = value;
+        const total =
+            document.querySelector("#total").value;
+        const previous = minus(total, kharcha);
+        setPrevious(previous);
+    }
+
+</script>

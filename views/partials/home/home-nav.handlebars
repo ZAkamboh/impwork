@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">INTERNO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home
+            <span class="sr-only">(current)</span>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="">services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            LABOUR
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/shafiq">shafiq create</a>
+            <a class="dropdown-item" href="/shafiqd"> shafiq record</a>
+            <a class="dropdown-item" href="/tariq">tariq create</a>
+            <a class="dropdown-item" href="/tariqrec"> tariq record</a>
+
+            <a class="dropdown-item" href="/shahzad">shahzad create</a>
+            <a class="dropdown-item" href="/shahzadrec"> shahzad record</a>
+            <a class="dropdown-item" href="/chacha">chacha karwing create</a>
+            <a class="dropdown-item" href="/chacharec"> chacha karwing record</a>
+            <a class="dropdown-item" href="/qadeer">qadeer create</a>
+            <a class="dropdown-item" href="/qadeerrec">qadeer record</a>
+            <a class="dropdown-item" href="/abdur">abdurahman create</a>
+            <a class="dropdown-item" href="/abdurrec">abdurahman record</a>
+            <a class="dropdown-item" href="/ehsan">ehsan create</a>
+            <a class="dropdown-item" href="/ehsanrec">ehsan record</a>
+            <a class="dropdown-item" href="/talha">talha create</a>
+            <a class="dropdown-item" href="/talharec">talha record</a>
+          </div>
+        </li>
+
+
+
+
+      </ul>
+    </div>
+  </div>
+  <a href="/home" style="float:right;color:red;font-size:20px">
+    {{#if user}}{{user.firstname}}{{/if}}
+  </a>
+  <a href="/log" style="float:right;color:red;font-size:20px;margin-left:8px;">
+    {{#if user}} Logout{{/if}}
+  </a>
+
+</nav>
